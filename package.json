@@ -1,0 +1,24 @@
+{
+  "name": "Teka",
+  "version": "1.0.0",
+  "description": "Theme teka",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmdadigital/teka"
+  },
+  "author": "mmdadigital",
+  "license": "GPL2",
+  "readmeFilename": "README.txt",
+  "gitHead": "7279f279a5187eaa53bd32a754b1eb2fb6fb4b56",
+  "dependencies" :
+  { "gulp" : "latest"
+  , "gulp-sass" : "latest"
+  , "node-bourbon" : "latest"
+  , "node-neat" : "latest"
+  , "browser-sync" : "latest"
+  }
+}
