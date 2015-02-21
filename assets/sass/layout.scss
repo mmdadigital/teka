@@ -1,4 +1,4 @@
-@import _config.sass
+@import _config.scss;
 
 // Layout
 // ------
@@ -11,15 +11,18 @@
 // 5. Sideabr Right
 
 // Layout rules. (Disclaimer: do not change if you're not sure you know what you're doing.)
-.container
-  @include outer-container
-  margin-left: auto
-  margin-right: auto
-  width: $max-width
+.container {
+  @include outer-container;
+  margin-left: auto;
+  margin-right: auto;
+  width: $max-width;
   // Collapse to fluid width once the browser width goes below current max width.
-  @if $responsive
-    @include media($max-width-fluid)
-      width: auto
+  @if $responsive {
+    @include media($max-width-fluid) {
+      width: auto;
+    }
+  }
+}
 #content
   .no-sidebars &
     // Span this div 12 columns wide.
