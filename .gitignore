@@ -2,3 +2,4 @@
 *.sassc
 *.map
 node_modules
+dist/*
