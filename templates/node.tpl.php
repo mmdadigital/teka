@@ -1,6 +1,6 @@
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>">
 
-  <?php if ($title_prefix || $title_suffix || $display_submitted || $unpublished || !$page && $title): ?>
+  <?php if ($title_prefix || $title_suffix || $display_submitted || !$page && $title): ?>
     <header>
       <?php print render($title_prefix); ?>
       <?php if (!$page && $title): ?>
@@ -13,10 +13,6 @@
           <?php print $user_picture; ?>
           <?php print $submitted; ?>
         </div>
-      <?php endif; ?>
-
-      <?php if ($unpublished): ?>
-        <p class="unpublished"><?php print t('Unpublished'); ?></p>
       <?php endif; ?>
     </header>
   <?php endif; ?>

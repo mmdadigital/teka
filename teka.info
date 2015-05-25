@@ -1,9 +1,6 @@
 name = Teka
 description = HTML5, SASS, Responsive grid base theme.
-screenshot = images/optimized/screenshot.gif
 core = "7.x"
-project = "Teka"
-engine = phptemplate
 
 regions[page_top] = Page top
 regions[header] = Header
@@ -15,40 +12,10 @@ regions[sidebar_second] = Second sidebar
 regions[footer] = Footer
 regions[page_bottom] = Page bottom
 
-features[] = logo
-features[] = name
-features[] = slogan
-features[] = node_user_picture
-features[] = comment_user_picture
-features[] = search
-features[] = favicon
-features[] = main_menu
-features[] = secondary_menu
-
 ; Stylesheets
-stylesheets[all][] = assets/css/default.css
-stylesheets[all][] = assets/css/layout.css
 stylesheets[all][] = assets/css/style.css
-stylesheets[all][] = assets/css/normalize.css
 stylesheets[print][] = assets/css/print.css
 
 ; Scripts
 scripts[] = assets/js/build/scripts.js
 scripts[] = assets/js/build/modernizr.js
-
-settings[basic_tabs] = 1
-settings[basic_breadcrumb] = 1
-settings[basic_breadcrumb_home] = 1
-settings[basic_breadcrumb_separator] = »
-settings[clear_registry] = 0
-settings[basic_ie_enabled] = 0
-settings[basic_ie_enabled_versions][ie8] = 0
-settings[basic_ie_enabled_versions][ie9] = 0
-settings[basic_ie_enabled_versions][ie10] = 0
-
-; Information added by Drupal.org packaging script on 2014-10-17
-version = "7.x-4.1"
-core = "7.x"
-project = "Teka"
-datestamp = "1413587138"
-
