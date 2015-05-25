@@ -14,11 +14,14 @@
   "license": "GPL2",
   "readmeFilename": "README.txt",
   "gitHead": "7279f279a5187eaa53bd32a754b1eb2fb6fb4b56",
-  "dependencies" :
-  { "gulp" : "latest"
-  , "gulp-sass" : "latest"
-  , "node-bourbon" : "latest"
-  , "node-neat" : "latest"
-  , "browser-sync" : "latest"
+  "dependencies": {
+    "gulp": "latest",
+    "gulp-sass": "latest",
+    "node-bourbon": "latest",
+    "node-neat": "latest",
+    "browser-sync": "latest"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11"
   }
 }
