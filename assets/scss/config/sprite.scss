@@ -1,0 +1,103 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$download-name: 'download';
+$download-x: 0px;
+$download-y: 0px;
+$download-offset-x: 0px;
+$download-offset-y: 0px;
+$download-width: 256px;
+$download-height: 256px;
+$download-total-width: 512px;
+$download-total-height: 512px;
+$download-image: 'sprite.png';
+$download: (0px, 0px, 0px, 0px, 256px, 256px, 512px, 512px, 'sprite.png', 'download', );
+$forward-name: 'forward';
+$forward-x: 256px;
+$forward-y: 0px;
+$forward-offset-x: -256px;
+$forward-offset-y: 0px;
+$forward-width: 256px;
+$forward-height: 256px;
+$forward-total-width: 512px;
+$forward-total-height: 512px;
+$forward-image: 'sprite.png';
+$forward: (256px, 0px, -256px, 0px, 256px, 256px, 512px, 512px, 'sprite.png', 'forward', );
+$rewind-name: 'rewind';
+$rewind-x: 0px;
+$rewind-y: 256px;
+$rewind-offset-x: 0px;
+$rewind-offset-y: -256px;
+$rewind-width: 256px;
+$rewind-height: 256px;
+$rewind-total-width: 512px;
+$rewind-total-height: 512px;
+$rewind-image: 'sprite.png';
+$rewind: (0px, 256px, 0px, -256px, 256px, 256px, 512px, 512px, 'sprite.png', 'rewind', );
+$spritesheet-width: 512px;
+$spritesheet-height: 512px;
+$spritesheet-image: 'sprite.png';
+$spritesheet-sprites: ($download, $forward, $rewind, );
+$spritesheet: (512px, 512px, 'sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

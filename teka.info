@@ -13,9 +13,11 @@ regions[footer] = Footer
 regions[page_bottom] = Page bottom
 
 ; Stylesheets
-stylesheets[all][] = assets/css/style.css
-stylesheets[print][] = assets/css/print.css
+stylesheets[all][] = dist/css/style.css
+stylesheets[print][] = dist/css/print.css
 
 ; Scripts
-scripts[] = assets/js/build/scripts.js
-scripts[] = assets/js/build/modernizr.js
+scripts[] = dist/js/main.js
+scripts[] = dist/js/lib/jquery.js
+scripts[] = dist/js/lib/modernizr.js
+scripts[] = dist/js/lib/bxslider.js
