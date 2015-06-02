@@ -2,16 +2,8 @@
 Introduction to Teka
 ========================
 
+Teka is the new drupal base theme.
 
-theming possibilities as well as a top-down load order for improved SEO. It is fully
-responsive out-of-the-box and provides an adaptive, elegant, SASS based grid system (Bourbon Neat).
-
-Basic's goal is to provide themers the building blocks needed to get their designs up and
-running quickly and simply.
-
-Basic is perfect if you want a simple, smart, and flexible theme starter.
-
-Less code spam, more ham.
 
 ===============
 Installation
@@ -66,21 +58,18 @@ Saving any of the scss files that are in 'assets/scss', will make gulp re-compil
 Our default files are:
 
 * style.scss => All your custom scss goes right here.
-
-
+-
 * base/_.scss          => All @import are centered on this file.
 * base/_base.scss      => All the base styles, such as 'a', 'ul', 'h1' etc.
 * base/_normalize.scss => 'Normalize' css lib.
-
-
+-
 * components/_buttons.scss       => Button default style mixins.
 * components/_forms.scss         => Form components style mixins.
 * components/_grid-settings.scss => Grid kickstart default style.
 * components/_lists.scss         => List default styles.
 * components/_tables.scss        => Table default styles.
 * components/_typography.scss    => Font-face declarations and default markup styles.
-
-
+-
 * conifg/_mixins.scss    => Your custom mixins to be used all over the theme.
 * conifg/_variables.scss => All kind of reusable data goes here, stored as variables.
 * conifg/sprites.scss    => Gulp's auto-generated sprite variables. (Don't write nothing on this file).
