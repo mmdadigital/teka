@@ -1,6 +1,7 @@
 name = Teka
 description = HTML5, SASS, Responsive grid base theme.
 core = "7.x"
+screenshot = screenshot.jpg
 
 regions[page_top] = Page top
 regions[header] = Header
