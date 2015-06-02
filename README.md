@@ -69,31 +69,21 @@ style.scss  => All your custom scss goes right here.
 
 
 base/_.scss          => All @import are centered on this file.
-
 base/_base.scss      => All the base styles, such as 'a', 'ul', 'h1' etc.
-
 base/_normalize.scss => 'Normalize' css lib.
 
 
 components/_buttons.scss       => Button default style mixins.
-
 components/_forms.scss         => Form components style mixins.
-
 components/_grid-settings.scss => Grid kickstart default style.
-
 components/_lists.scss         => List default styles.
-
 components/_tables.scss        => Table default styles.
-
 components/_typography.scss    => Font-face declarations and default markup styles.
 
 
 conifg/_mixins.scss    => Your custom mixins to be used all over the theme.
-
 conifg/_variables.scss => All kind of reusable data goes here, stored as variables.
-
 conifg/sprites.scss    => Gulp's auto-generated sprite variables. (Don't write nothing on this file).
-
 
 
 ========================
