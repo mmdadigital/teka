@@ -18,7 +18,8 @@ Installation
 
 
 In order to make things easier, we have chosen to create our own Yeoman scaffolding generator.
-So, all you got to do is:\n
+So, all you got to do is:
+
 1 - Install teka's generator globally
 
 ```
