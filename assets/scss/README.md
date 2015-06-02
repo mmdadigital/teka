@@ -1,8 +1,9 @@
+
 ========================
 Introduction to Basic
 ========================
 
-
+Basic boasts a clean HTML5 structure with extensible CSS classes and ID's for unlimited
 theming possibilities as well as a top-down load order for improved SEO. It is fully
 responsive out-of-the-box and provides an adaptive, elegant, SASS based grid system (Bourbon Neat).
 
