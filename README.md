@@ -65,7 +65,7 @@ width: 122px;
 Saving any of the scss files that are in 'assets/scss', will make gulp re-compile all the scss and minifying them into the single 'dist/css/style.css'.
 Our default files are:
 
-* style.scss  => All your custom scss goes right here.
+* style.scss => All your custom scss goes right here.
 
 * base/_.scss          => All @import are centered on this file.
 * base/_base.scss      => All the base styles, such as 'a', 'ul', 'h1' etc.
@@ -81,7 +81,6 @@ Our default files are:
 * conifg/_mixins.scss    => Your custom mixins to be used all over the theme.
 * conifg/_variables.scss => All kind of reusable data goes here, stored as variables.
 * conifg/sprites.scss    => Gulp's auto-generated sprite variables. (Don't write nothing on this file).
-
 
 ========================
 Changing the Layout
