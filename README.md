@@ -22,20 +22,17 @@ So, all you got to do is:
 1 - Install teka's generator globally
 
 ```
-#!javascript
 sudo npm install -g generator-teka
 
 ```
 2 - Run yo teka into your themes directory (it will ask for a theme name)
 ```
-#!javascript
 cd /www/my_project/sites/all/themes/
 yo teka
 
 ```
 Install teka's dependencies into the generated directory, then run gulp framework
 ```
-#!javascript
 cd my_project/
 sudo npm install
 gulp
@@ -53,13 +50,11 @@ You're done!
 You can just drop separated .png files into 'assets/img/sprite/' and you'll receive a brand new 'dist/img/sprite.png'.
 ### Sprites / usage
 Use the pattern 'header-big-logo.png' on your image names. So you can just use the following SCSS:
-```
-#!scss
+```scss
 @include sprite($header-big-logo);
 ```
 this will be compiled to the css equivalent, as the example
-```
-#!css
+```css
 background-image: src(../img/sprite.png);
 background-position: 0px 0px;
 heihgt: 234px;
