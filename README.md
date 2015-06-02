@@ -15,7 +15,7 @@ Less code spam, more ham.
 
 ===============
 Installation
-===============
+
 
 In order to make things easier, we have chosen to create our own Yeoman scaffolding generator.
 So, all you got to do is:
@@ -44,7 +44,7 @@ You're done!
 
 ===========================
 ##Our gulp workflow
-===========================
+
 
 ### Sprites / creation
 You can just drop separated .png files into 'assets/img/sprite/' and you'll receive a brand new 'dist/img/sprite.png'.
