@@ -1,5 +1,5 @@
 ========================
-Introduction to Basic
+Introduction to Teka
 ========================
 
 
@@ -17,47 +17,54 @@ Less code spam, more ham.
 Installation
 ===============
 
-Basic utilizes SASS for adaptive grids and layouts and general structure of the site.
-It's recommended to use SASS for building out your theme. You are required to download
-the following Ruby Gems and plugins:
+In order to make things easier, we have chosen to create our own Yeoman scaffolding generator.
+So, all you got to do is:
+1 - Install teka's generator globally
 
-  - SASS (http://sass-lang.com/)
-  - Bourbon (http://bourbon.io/)
-  - Boubon Neat (http://neat.bourbon.io/)
+```
+#!javascript
+sudo npm install -g generator-teka
 
-Basic is meant to be YOUR theme. To change the name of the theme from 'basic' to another name like 'mytheme',
-follow these steps (to do BEFORE enabling the theme) :
+```
+2 - Run yo teka into your themes directory (it will ask for a theme name)
+```
+#!javascript
+cd /www/my_project/sites/all/themes/
+yo teka
 
-  - rename the theme folder to 'mytheme'
-  - rename basic.info to mytheme.info
-  - Edit basic.info and change the name, description, project (can be deleted), replace all other instances of "basic" ie. [basic_tabs] would become [mytheme_tabs]
-  - In template.php change each iteration of 'basic' to 'mytheme'
-  - In theme-settings.php change each iteration of 'basic' to 'mytheme'
+```
+Install teka's dependencies into the generated directory, then run gulp framework
+```
+#!javascript
+cd my_project/
+sudo npm install
+gulp
 
-To use SASS and automatically compile it within your theme, please refer to "Using Grunt" in the documentation below. If you would like to use SASS' internal watch functionality, simply CD into your theme directory and run:
+```
 
-"sass --watch sass:css"
+You're done!
 
-If you would like to add browser sync support to your theme, please include the follow JS snippet before the closing </body> tag in the html.tpl.php file:
-
-<script type='text/javascript'>//<![CDATA[
-;document.write("<script defer src='//HOST:3000/socket.io/socket.io.js'><\/script><script defer src='//HOST:3001/client/browser-sync-client.0.9.1.js'><\/script>".replace(/HOST/g, location.hostname));
-//]]></script>
 
 ===========================
-What are the files for ?
+##Our gulp workflow
 ===========================
 
-- basic.info                => provide informations about the theme, like regions, css, settings, js ...
-- block-system-main.tpl.php => template to edit the content
-- block.tpl.php             => template to edit the blocks
-- comment.tpl.php           => template to edit the comments
-- node.tpl.php              => template to edit the nodes (in content)
-- page.tpl.php              => template to edit the page
-- template.php              => used to modify drupal's default behavior before outputting HTML through
-                               the theme
-- theme-settings            => used to create additional settings in the theme settings page
-
+### Sprites / creation
+You can just drop separated .png files into 'assets/img/sprite/' and you'll receive a brand new 'dist/img/sprite.png'.
+### Sprites / usage
+Use the pattern 'header-big-logo.png' on your image names. So you can just use the following SCSS:
+```
+#!scss
+@include sprite($header-big-logo);
+```
+this will be compiled to the css equivalent, as the example
+```
+#!css
+background-image: src(../img/sprite.png);
+background-position: 0px 0px;
+heihgt: 234px;
+width: 122px;
+```
 ============
 In /SASS
 ============
