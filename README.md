@@ -65,23 +65,22 @@ width: 122px;
 Saving any of the scss files that are in 'assets/scss', will make gulp re-compile all the scss and minifying them into the single 'dist/css/style.css'.
 Our default files are:
 
-layout.scss =>
-style.scss  =>
+style.scss  => All your custom scss goes right here.
 
-base/_.scss          =>
-base/_base.scss      =>
-base/_normalize.scss =>
+base/_.scss          => All @import are centered on this file;
+base/_base.scss      => All the base styles, such as 'a', 'ul', 'h1' etc;
+base/_normalize.scss => 'Normalize' css lib;
 
-components/_buttons.scss       =>
-components/_forms.scss         =>
-components/_grid-settings.scss =>
-components/_lists.scss         =>
-components/_tables.scss        =>
-components/_typography.scss    =>
+components/_buttons.scss       => Button default style mixins;
+components/_forms.scss         => Form components style mixins;
+components/_grid-settings.scss => Grid kickstart default style;
+components/_lists.scss         => List default styles;
+components/_tables.scss        => Table default styles;
+components/_typography.scss    => Font-face declarations and default markup styles;
 
-conifg/_mixins.scss    =>
-conifg/_variables.scss =>
-conifg/sprites.scss    =>
+conifg/_mixins.scss    => Your custom mixins to be used all over the theme;
+conifg/_variables.scss => All kind of reusable data goes here, stored as variables;
+conifg/sprites.scss    => Gulp's auto-generated sprite variables. (Don't write nothing on this file)
 
 
 ========================
