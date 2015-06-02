@@ -2,7 +2,9 @@
 Introduction to Teka
 ========================
 
-Teka is the new drupal base theme.
+Teka is the new drupal base theme from MMDA.
+
+We want to offer a better experience on building drupal themes.
 
 
 ===============
@@ -58,18 +60,18 @@ Saving any of the scss files that are in 'assets/scss', will make gulp re-compil
 Our default files are:
 
 * style.scss => All your custom scss goes right here.
-
 * base/_.scss          => All @import are centered on this file.
 * base/_base.scss      => All the base styles, such as 'a', 'ul', 'h1' etc.
 * base/_normalize.scss => 'Normalize' css lib.
-
 * components/_buttons.scss       => Button default style mixins.
 * components/_forms.scss         => Form components style mixins.
 * components/_grid-settings.scss => Grid kickstart default style.
 * components/_lists.scss         => List default styles.
 * components/_tables.scss        => Table default styles.
 * components/_typography.scss    => Font-face declarations and default markup styles.
-
 * conifg/_mixins.scss    => Your custom mixins to be used all over the theme.
 * conifg/_variables.scss => All kind of reusable data goes here, stored as variables.
 * conifg/sprites.scss    => Gulp's auto-generated sprite variables. (Don't write nothing on this file).
+
+###js
+Saving any of the js files in 'assets/js', will make gulp concatenate all the js and uglifying them into the single 'dist/js/script.js'.
