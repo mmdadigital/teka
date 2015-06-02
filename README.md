@@ -65,7 +65,7 @@ width: 122px;
 Saving any of the scss files that are in 'assets/scss', will make gulp re-compile all the scss and minifying them into the single 'dist/css/style.css'.
 Our default files are:
 
-style.scss  => All your custom scss goes right here.
+* style.scss  => All your custom scss goes right here.
 
 
 * base/_.scss          => All @import are centered on this file.
