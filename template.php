@@ -1,29 +1,32 @@
 <?php
 
 /**
- * Here we override the default HTML output of drupal.
- * refer to https://drupal.org/node/457740
+ * Add theme_hooks here.
  */
 
+/**
+ * Implements hook_preprocess_html
+ */
 function teka_preprocess_html(&$vars) {
 
 }
 
+/**
+ * Implements hook_preprocess_page
+ */
 function teka_preprocess_page(&$vars, $hook) {
 
 }
 
+/**
+ * Implements hook_preprocess_node
+ */
 function teka_preprocess_node(&$vars) {
 
 }
 
 /**
- * Return a themed breadcrumb trail.
- *
- * @param $breadcrumb
- *   An array containing the breadcrumb links.
- * @return
- *   A string containing the breadcrumb output.
+ * Implements hook_breadcrumb
  */
 function teka_breadcrumb($variables) {
 

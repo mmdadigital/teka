@@ -19,6 +19,3 @@ stylesheets[print][] = dist/css/print.css
 
 ; Scripts
 scripts[] = dist/js/main.js
-scripts[] = dist/js/lib/jquery.js
-scripts[] = dist/js/lib/modernizr.js
-scripts[] = dist/js/lib/bxslider.js
