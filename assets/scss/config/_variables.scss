@@ -1,3 +1,7 @@
+/**
+ * Variables
+ */
+
 
 // Typography
 $base-font-family: $helvetica;
@@ -17,9 +21,9 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$blue: #477dca;
-$dark-gray: #333;
-$medium-gray: #999;
+$link-color: #477dca;
+$title-color: #333;
+$hover-color: #999;
 $light-gray: #ddd;
 
 // Font Colors
@@ -49,16 +53,17 @@ $responsive:    true;
 $column:        60px;
 $gutter:        20px;
 $grid-columns:  4;
+
 // We set the max width of the page using the px to em function in Bourbon.
 // the first value is the pixel value of the width and the second is the base font size of your theme.
 // In this instance we want the max width to be 1088px and on Line 6 of style.sass we have reset the base
 // font size to 13px so the first value would be 1088 and the second 13
 // ex. em(1088, 13)
-$font-size:     16px;
-$max-width-px:  1088px;
-$max-width:     em($max-width-px, $font-size);
+$font-size: 16px;
+$max-width-px: 1088px;
+$max-width: em($max-width-px, $font-size);
 
 //Breakpoints
-$mobile:        new-breakpoint(min-width em(320px, $font-size) 4);
-$tablet:        new-breakpoint(min-width em(720px, $font-size) 8);
-$desktop:       new-breakpoint(min-width em(960px, $font-size) 15);
+$mobile: new-breakpoint(min-width em(320px, $font-size) 4);
+$tablet: new-breakpoint(min-width em(720px, $font-size) 8);
+$desktop: new-breakpoint(min-width em(960px, $font-size) 15);
