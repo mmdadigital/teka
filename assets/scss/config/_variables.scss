@@ -21,17 +21,22 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$link-color: #477dca;
 $title-color: #333;
+$text-color: #333;
+$link-color: #477dca;
 $hover-color: #999;
-$light-gray: #ddd;
+$main-color: #ddd;
+$second-color: #ddd;
+$third-color: #ddd;
+$border-color: #ddd;
+$button-color: #ddd;
 
 // Font Colors
-$base-font-color: $dark-gray;
-$action-color: $blue;
+$base-font-color: $text-color;
+$action-color: $link-color;
 
 // Border
-$base-border-color: $light-gray;
+$base-border-color: $border-color;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors

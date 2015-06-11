@@ -24,9 +24,9 @@ label {
     display: none;
   }
 }
-
 #{$all-text-inputs},
-select[multiple=multiple] {
+select[multiple=multiple],
+.input {
   background-color: $base-background-color;
   border: $base-border;
   border-radius: $base-border-radius;
@@ -60,6 +60,9 @@ select[multiple=multiple] {
   }
 }
 
+@mixin input(){
+  @extend .input;
+}
 textarea {
   resize: vertical;
 }
