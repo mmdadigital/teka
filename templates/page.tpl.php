@@ -113,12 +113,12 @@
     </header> <!-- /.section, /#header -->
 
     <?php if ($main_menu || $secondary_menu): ?>
-      <div id="navigation">
+      <nav id="navigation">
         <div class="section">
           <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Main menu'))); ?>
           <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Secondary menu'))); ?>
         </div>
-      </div> <!-- /.section, /#navigation -->
+      </nav> <!-- /.section, /#navigation -->
     <?php endif; ?>
 
     <?php if ($breadcrumb): ?>
@@ -129,7 +129,7 @@
 
     <?php print $messages; ?>
 
-    <div id="main-wrapper">
+    <main id="main-wrapper">
       <div id="main" class="clearfix">
 
         <div id="content" class="column">
@@ -148,23 +148,23 @@
         </div> <!-- /.section, /#content -->
 
         <?php if ($page['sidebar_first']): ?>
-          <div id="sidebar-first" class="column sidebar">
+          <aside id="sidebar-first" class="column sidebar">
             <div class="section">
               <?php print render($page['sidebar_first']); ?>
             </div>
-          </div> <!-- /.section, /#sidebar-first -->
+          </aside> <!-- /.section, /#sidebar-first -->
         <?php endif; ?>
 
         <?php if ($page['sidebar_second']): ?>
-          <div id="sidebar-second" class="column sidebar">
+          <aside id="sidebar-second" class="column sidebar">
             <div class="section">
               <?php print render($page['sidebar_second']); ?>
             </div>
-          </div> <!-- /.section, /#sidebar-second -->
+          </aside> <!-- /.section, /#sidebar-second -->
         <?php endif; ?>
 
       </div>
-    </div> <!-- /#main, /#main-wrapper -->
+    </main> <!-- /#main, /#main-wrapper -->
 
     <footer id="footer">
       <div class="section">
