@@ -1,5 +1,8 @@
 /**
- * Main js file.
+ * @file
+ * A JavaScript file for the theme.
+ *
+ * This JavaScript file is loaded on all Pages.
  */
 
 (function($) {
