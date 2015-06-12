@@ -3,7 +3,7 @@
  */
 
 (function($) {
-  Drupal.behaviors.Main = {
+  Drupal.behaviors.teka_main = {
     attach: function (context, settings) {
       //
     }
