@@ -5,7 +5,7 @@ var gulp        = require('gulp'),
     minify      = require('gulp-minify-css'),
     concat      = require('gulp-concat'),
     sass        = require('gulp-sass'),
-    livereload  = require('gulp-livereload'),
+    browserSync = require('browser-sync').create(),
     plumber     = require('gulp-plumber'),
     spritesmith = require('gulp.spritesmith'),
     neat        = require('node-neat').includePaths;
@@ -30,6 +30,16 @@ var path = {
 };
 
 //////////////////////////////
+// BrowserSync
+//////////////////////////////
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        proxy: "mmda-treinamento.l"
+    });
+});
+
+
+//////////////////////////////
 // JS Tasks
 //////////////////////////////
 gulp.task('js', function () {
@@ -40,8 +50,7 @@ gulp.task('js', function () {
         .pipe(concat('output.min.js'))
         .on('error',console.log.bind(console))
         .pipe(gulp.dest('dist/js'))
-        .on('error',console.log.bind(console))
-        .pipe(livereload());
+        .on('error',console.log.bind(console));
 });
 
 //////////////////////////////
@@ -59,7 +68,7 @@ gulp.task('sass', function(){
         .on('error',console.log.bind(console))
         .pipe(gulp.dest('dist/css'))
         .on('error',console.log.bind(console))
-        .pipe(livereload())
+        .pipe(browserSync.reload({stream: true}))
         .on('error',console.log.bind(console));
 });
 
@@ -81,17 +90,22 @@ gulp.task('sprite', function () {
 // Watch Tasks
 //////////////////////////////
 gulp.task('watch', function () {
-    livereload();
     gulp.watch(path.js_src, ['js']).on('error',console.log.bind(console));
     gulp.watch(path.sassWatch, ['sass']).on('error',console.log.bind(console));
     gulp.watch('gulpfile.js', ['default']).on('error',console.log.bind(console));
     gulp.watch('assets/img/sprite/*.*', ['sprite']).on('error',console.log.bind(console));
+
+    //Reloads
+    gulp.watch('dist/css/*.*').on('change', browserSync.reload);
+    gulp.watch('dist/js/*.*').on('change', browserSync.reload);
+    gulp.watch('dist/js/lib/*.*').on('change', browserSync.reload);
 });
 
 //////////////////////////////
 //Default Tasks
 //////////////////////////////
 gulp.task('default', [
+    'browser-sync',
     'sass',
     'js',
     'watch',

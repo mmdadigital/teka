@@ -8,7 +8,7 @@
 (function($) {
   Drupal.behaviors.teka_main = {
     attach: function (context, settings) {
-      //
+      // Your code here.
     }
   };
 })(jQuery);
