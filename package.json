@@ -50,8 +50,7 @@
     "watch": "^0.16.0"
   },
   "scripts": {
-    "test": "gulp",
-    "postinstall": "find node_modules/ -name '*.info' -type f -delete"
+    "test": "gulp"
   },
   "repository": {
     "type": "git",
