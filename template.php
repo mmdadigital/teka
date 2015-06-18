@@ -35,7 +35,7 @@ function teka_breadcrumb($variables) {
 /**
  * Implements hook_css_alter().
  */
-function meutema_css_alter(&$css) {
+function teka_css_alter(&$css) {
   // This fix bug on Browser Sync
   $count = 0;
   if (!variable_get('preprocess_css')) {
