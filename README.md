@@ -1,3 +1,12 @@
+╔═══════╗
+╚══╗ ╔═╔╩═══╗╔═╗╔═╗╔══════╗
+   ║ ║ ║ ╔══╝║ ║║║╝║ ╔══╗ ║
+   ║ ║ ║ ╚══╗║ ╚╝╝ ║ ║  ║ ║
+   ║ ║ ║ ╔══╝║ ╔╗║ ║ ╠══╣ ║
+   ║ ║ ║ ╚══╗║ ║║╚═╗ ║  ║ ║
+   ╚═╝ ╚════╝╚═╝╚══╝═╝  ╚═╝
+
+
 ========================
 Introduction to Teka
 ========================
@@ -14,13 +23,18 @@ Installation
 In order to make things easier, we have chose to create our own Yeoman scaffolding generator.
 So, all you got to do is:
 
-1 - Install teka's generator globally
+1 - Install Yo
+
+```
+$ npm install -g yo
+
+2 - Install teka's generator globally
 
 ```
 $ sudo npm install -g generator-teka
 
 ```
-2 - Run yo teka into your themes directory (it will ask for a theme name)
+3 - Run yo teka into your themes directory (it will ask for a theme name)
 ```
 $ cd /www/my_project/sites/all/themes/
 $ yo teka
