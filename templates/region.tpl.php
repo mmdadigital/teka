@@ -29,7 +29,7 @@
  */
 ?>
 <?php if ($content): ?>
-  <div class="<?php print $classes; ?>">
+  <section class="<?php print $classes; ?>">
     <?php print $content; ?>
-  </div>
+  </section>
 <?php endif; ?>

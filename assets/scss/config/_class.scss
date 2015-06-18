@@ -1,0 +1,11 @@
+/**
+ * Add all your common class here.
+ */
+
+.center-wrapper {
+  @include center;
+}
+
+.button {
+  @include button;
+}
