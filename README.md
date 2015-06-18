@@ -19,6 +19,8 @@ So, all you got to do is:
 ```
 $ npm install -g yo
 
+```
+
 2 - Install teka's generator globally
 
 ```
