@@ -75,7 +75,7 @@
     <?php print $submitted; ?>
   </time>
 
-  <details class="content"<?php print $content_attributes; ?>>
+  <div class="content"<?php print $content_attributes; ?>>
     <?php
       // We hide the comments and links now so that we can render them later.
       hide($content['links']);
@@ -86,7 +86,7 @@
       <?php print $signature ?>
     </div>
     <?php endif; ?>
-  </details>
+  </div>
 
   <?php print render($content['links']) ?>
 </article>

@@ -52,7 +52,7 @@
   <?php endif;?>
   <?php print render($title_suffix); ?>
 
-  <details class="content"<?php print $content_attributes; ?>>
+  <div class="content"<?php print $content_attributes; ?>>
     <?php print $content ?>
-  </details>
+  </div>
 </article>
