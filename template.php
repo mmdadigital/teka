@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Add theme_hooks here.
+ * Add custom Teka Hooks.
  */
 
 /**
@@ -17,11 +17,48 @@ function teka_preprocess_html(&$vars) {
     $vars['classes_array'][] = 'page-error-403';
   }
 
-  // Add custom Fonts.
-  $google_fonts_url = 'http://fonts.googleapis.com/css?family=';
-  $family = 'Source+Sans+Pro:400,200,200italic,300,300italic,';
-  $family .= '400italic,600,600italic,700,700italic';
-  drupal_add_css($google_fonts_url . $family, array('type' => 'external'));
+  // Add a viewport meta tag.
+  $viewport = array(
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'name' => 'viewport',
+      'content' => 'width=device-width, initial-scale=1.0',
+    ),
+  );
+  drupal_add_html_head($viewport, 'viewport');
+
+  // Force IE to use most up-to-date render engine.
+  $xua = array(
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'http-equiv' => 'X-UA-Compatible',
+      'content' => 'IE=edge',
+    ),
+  );
+  drupal_add_html_head($xua, 'x-ua-compatible');
+
+  // Add in TypeKit Code.
+  if (theme_get_setting('teka_typekit_id')) {
+    $id = theme_get_setting('teka_typekit_id');
+    $js = <<<EOT
+    (function(d) {var config = {kitId: '$id',scriptTimeout: 3000},
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(
+    /\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=
+    d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;
+    h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';
+    tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;
+    if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{
+    Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);
+EOT;
+
+    drupal_add_js($js, array('type' => 'inline', 'force header' => true));
+  }
+
+  // Add the Google Fonts.
+  if (theme_get_setting('teka_gfonts_id')) {
+    $gfonts_url = theme_get_setting('teka_gfonts_id');
+    drupal_add_css($gfonts_url, array('type' => 'external'));
+  }
 }
 
 /**

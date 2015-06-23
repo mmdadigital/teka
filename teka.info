@@ -3,19 +3,6 @@ description = HTML5, SASS, Responsive grid base theme.
 core = "7.x"
 screenshot = screenshot.jpg
 
-regions[page_top] = Page top
-regions[header] = Header
-regions[highlighted] = Highlighted
-regions[help] = Help
-regions[content] = Content
-regions[sidebar_first] = First sidebar
-regions[sidebar_second] = Second sidebar
-regions[footer] = Footer
-regions[page_bottom] = Page bottom
-
-; Stylesheets
-stylesheets[all][] = dist/css/style.css
-stylesheets[print][] = dist/css/print.css
-
-; Scripts
-scripts[] = dist/js/main.js
+; Theme Variables
+settings[teka_typekit_id] = 0
+settings[teka_gfonts_id] =

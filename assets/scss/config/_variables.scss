@@ -69,6 +69,9 @@ $max-width-px: 1088px;
 $max-width: em($max-width-px, $font-size);
 
 //Breakpoints
-$mobile: new-breakpoint(min-width em(320px, $font-size) 4);
-$tablet: new-breakpoint(min-width em(720px, $font-size) 8);
-$desktop: new-breakpoint(min-width em(960px, $font-size) 15);
+$mobile-width: 320px;
+$tablet-width: 720px;
+$desktop-width: 960px;
+$mobile: new-breakpoint(min-width em($mobile-width, $font-size) 4);
+$tablet: new-breakpoint(min-width em($tablet-width, $font-size) 8);
+$desktop: new-breakpoint(min-width em($desktop-width, $font-size) 15);
