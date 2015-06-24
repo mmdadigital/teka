@@ -4,8 +4,8 @@ core = "7.x"
 screenshot = screenshot.jpg
 
 ; Theme Custom Settings Variables
-settings[teka_typekit_id] =
-settings[teka_gfonts_id] =
+settings[teka_typekit_id] = 0
+settings[teka_gfonts_id] = 0
 
 ; Theme Settings Variables
 settings[toggle_logo] = 1

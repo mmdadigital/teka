@@ -10,13 +10,10 @@
  */
 function teka_form_system_theme_settings_alter(&$form, $form_state) {
   // Google Fonts URL.
-  $glink = '<a href="https://www.google.com/fonts" target="_blank">';
-  $glink .= 'Google Fonts</a>';
-  $ex = 'Ex.: http://fonts.googleapis.com/css?family=Open+Sans:400|Roboto:400';
-  $desc = t(
-    "If you are using @link to webfonts, put google URL here. @ex",
-    array('@link' => $glink, '@ex' => $ex),
-  );
+  $desc = t("If you are using <a href='@link' target='_blank'>Google Fonts</a>
+    to webfonts, put google URL here.
+    Ex.: http://fonts.googleapis.com/css?family=Open+Sans:400|Roboto:400",
+    array('@link' => 'https://www.google.com/fonts'));
   $form['misc']['teka_gfonts_id'] = array(
     '#type' => 'textfield',
     '#title' => t('Google Fonts URL'),
@@ -27,11 +24,9 @@ function teka_form_system_theme_settings_alter(&$form, $form_state) {
   );
 
   // Typekit ID Field.
-  $typekit_link = '<a href="https://typekit.com" target="_blank">Typekit</a>';
-  $desc = t(
-    "If you are using @link to webfonts, put your ID here",
-    array('@link' => $typekit_link),
-  );
+  $typekit_link = '';
+  $desc = t("If you are using <a href='@link' target='_blank'>Typekit</a>
+    to webfonts, put your ID here", array('@link' => 'https://typekit.com'));
   $form['misc']['teka_typekit_id'] = array(
     '#type' => 'textfield',
     '#title' => t('Typekit ID'),
