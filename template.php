@@ -1,7 +1,8 @@
 <?php
 
 /**
- * Add custom Teka Hooks.
+ * @file
+ * Implements custom Teka Hooks.
  */
 
 /**
@@ -51,7 +52,7 @@ function teka_preprocess_html(&$vars) {
     Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);
 EOT;
 
-    drupal_add_js($js, array('type' => 'inline', 'force header' => true));
+    drupal_add_js($js, array('type' => 'inline', 'force header' => TRUE));
   }
 
   // Add the Google Fonts.
@@ -68,6 +69,7 @@ EOT;
 function teka_preprocess_page(&$vars, $hook) {
 
 }
+// */
 
 /**
  * Implements hook_preprocess_node().
@@ -85,6 +87,7 @@ function teka_preprocess_node(&$vars) {
 function teka_breadcrumb($variables) {
 
 }
+// */
 
 /**
  * Implements hook_css_alter().
