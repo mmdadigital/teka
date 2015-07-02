@@ -41,18 +41,9 @@ function teka_preprocess_html(&$vars) {
   // Add in TypeKit Code.
   if (theme_get_setting('teka_typekit_id')) {
     $id = theme_get_setting('teka_typekit_id');
-    $js = <<<EOT
-    (function(d) {var config = {kitId: '$id',scriptTimeout: 3000},
-    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(
-    /\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=
-    d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;
-    h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';
-    tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;
-    if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{
-    Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);
-EOT;
-
-    drupal_add_js($js, array('type' => 'inline', 'force header' => TRUE));
+    $path = drupal_get_path('theme', 'teka') . '/dist/js/typekit.js';
+    drupal_add_js(array('teka' => array('typekitID' => $id)), 'setting');
+    drupal_add_js($path, array('type' => 'file', 'force header' => TRUE));
   }
 
   // Add the Google Fonts.
