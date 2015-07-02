@@ -1,0 +1,6 @@
+name: Teka
+type: theme
+description: 'HTML5, SASS, Responsive grid base theme.'
+package: Base Theme
+core: 8.x
+screenshot: screenshot.jpg
