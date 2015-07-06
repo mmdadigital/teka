@@ -1,0 +1,7 @@
+typeKit:
+  version: VERSION
+  js:
+    dist/js/typekit.js: {}
+  dependencies:
+  - core/jquery
+  - core/drupalSettings

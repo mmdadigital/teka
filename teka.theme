@@ -41,16 +41,17 @@ function teka_preprocess_html(&$vars) {
   // Add in TypeKit Code.
   if (theme_get_setting('teka_typekit_id')) {
     $id = theme_get_setting('teka_typekit_id');
-    $path = drupal_get_path('theme', 'teka') . '/dist/js/typekit.js';
-    drupal_add_js(array('teka' => array('typekitID' => $id)), 'setting');
-    drupal_add_js($path, array('type' => 'file', 'force header' => TRUE));
+    var_dump($vars['html']['#attached']);
+    $vars['html']['#attached']['library'][] = 'teka/typeKit';
+    $vars['html']['#attached']['drupalSettings']['teka']['typeKit']['id'] = $id;
+    var_dump($vars['html']['#attached']);
   }
 
   // Add the Google Fonts.
-  if (theme_get_setting('teka_gfonts_id')) {
+  /*if (theme_get_setting('teka_gfonts_id')) {
     $gfonts_url = theme_get_setting('teka_gfonts_id');
     drupal_add_css($gfonts_url, array('type' => 'external'));
-  }
+  }*/
 }
 
 /**
