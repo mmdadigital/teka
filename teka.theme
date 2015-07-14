@@ -9,59 +9,21 @@
  * Implements hook_preprocess_html().
  */
 function teka_preprocess_html(&$vars) {
-  // Add class for 404 and 403 pages.
-  $status = drupal_get_http_header("status");
-  if ($status == '404 Not Found') {
-    $vars['classes_array'][] = 'page-error-404';
-  }
-  elseif ($status == '403 Forbidden') {
-    $vars['classes_array'][] = 'page-error-403';
-  }
+  /**/
+}
 
-  // Add a viewport meta tag.
-  /*$viewport = array(
-    '#tag' => 'meta',
-    '#attributes' => array(
-      'name' => 'viewport',
-      'content' => 'width=device-width, initial-scale=1.0',
-    ),
-  );
-  drupal_add_html_head($viewport, 'viewport');*/
-
-  // Force IE to use most up-to-date render engine.
-  /*$xua = array(
-    '#tag' => 'meta',
-    '#attributes' => array(
-      'http-equiv' => 'X-UA-Compatible',
-      'content' => 'IE=edge',
-    ),
-  );
-  drupal_add_html_head($xua, 'x-ua-compatible');*/
-
+function teka_page_attachments_alter(&$page) {
   // Add in TypeKit Code.
-  if (theme_get_setting('teka_typekit_id')) {
-    $id = theme_get_setting('teka_typekit_id');
-    var_dump($vars['html']['#attached']);
-    $vars['html']['#attached']['library'][] = 'teka/typeKit';
-    $vars['html']['#attached']['drupalSettings']['teka']['typeKit']['id'] = $id;
-    var_dump($vars['html']['#attached']);
+  if ($id = theme_get_setting('teka_typekit_id')) {
+    $page['#attached']['library'][] = 'teka/typeKit';
+    $page['#attached']['drupalSettings']['teka']['typeKit']['id'] = $id;
   }
 
   // Add the Google Fonts.
-  /*if (theme_get_setting('teka_gfonts_id')) {
-    $gfonts_url = theme_get_setting('teka_gfonts_id');
-    drupal_add_css($gfonts_url, array('type' => 'external'));
-  }*/
+  if ($gfonts_url = theme_get_setting('teka_gfonts_id')) {
+   //
+  }
 }
-
-/**
- * Implements hook_preprocess_page().
- */
-/* -- Delete this line if you want to use this function
-function teka_preprocess_page(&$vars, $hook) {
-
-}
-// */
 
 /**
  * Implements hook_preprocess_node().
@@ -71,12 +33,3 @@ function teka_preprocess_node(&$vars) {
   $suggestion = 'node__' . $vars['type'] . '__' . $vars['view_mode'];
   $vars['theme_hook_suggestions'][] = $suggestion;
 }
-
-/**
- * Implements hook_breadcrumb().
- */
-/* -- Delete this line if you want to use this function
-function teka_breadcrumb($variables) {
-
-}
-// */
