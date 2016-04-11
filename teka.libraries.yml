@@ -5,3 +5,10 @@ typeKit:
   dependencies:
   - core/jquery
   - core/drupalSettings
+googleFonts:
+  version: VERSION
+  js:
+    dist/js/googleFonts.js: {}
+  dependencies:
+  - core/jquery
+  - core/drupalSettings

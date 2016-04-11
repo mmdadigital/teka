@@ -14,10 +14,10 @@ function teka_form_system_theme_settings_alter(&$form, $form_state) {
     to webfonts, put google URL here.
     Ex.: http://fonts.googleapis.com/css?family=Open+Sans:400|Roboto:400",
     array('@link' => 'https://www.google.com/fonts'));
-  $form['misc']['teka_gfonts_id'] = array(
+  $form['misc']['teka_gFonts'] = array(
     '#type' => 'textfield',
     '#title' => t('Google Fonts URL'),
-    '#default_value' => theme_get_setting('teka_gfonts_id'),
+    '#default_value' => theme_get_setting('teka_gFonts'),
     '#size' => 60,
     '#maxlength' => 256,
     '#description' => $desc,

@@ -20,8 +20,9 @@ function teka_page_attachments_alter(&$page) {
   }
 
   // Add the Google Fonts.
-  if ($gfonts_url = theme_get_setting('teka_gfonts_id')) {
-   //
+  if ($gfonts = theme_get_setting('teka_gFonts')) {
+    $page['#attached']['library'][] = 'teka/googleFonts';
+    $page['#attached']['drupalSettings']['teka']['googleFonts']['families'] = $gfonts;
   }
 }
 
