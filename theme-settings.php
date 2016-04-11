@@ -11,8 +11,8 @@
 function teka_form_system_theme_settings_alter(&$form, $form_state) {
   // Google Fonts URL.
   $desc = t("If you are using <a href='@link' target='_blank'>Google Fonts</a>
-    to webfonts, put google URL here.
-    Ex.: http://fonts.googleapis.com/css?family=Open+Sans:400|Roboto:400",
+    to webfonts, put your Google Fonts <strong>Family</strong> here.
+    Ex.: <strong>Open+Sans:400,600,700,300:latin</strong>",
     array('@link' => 'https://www.google.com/fonts'));
   $form['misc']['teka_gFonts'] = array(
     '#type' => 'textfield',
