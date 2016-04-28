@@ -3,4 +3,3 @@
 *.map
 *.swp
 node_modules
-dist/*
