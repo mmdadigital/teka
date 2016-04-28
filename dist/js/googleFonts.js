@@ -1,8 +1,9 @@
 (function ($) {
   Drupal.behaviors.googleFonts = {
     attach: function (context, settings) {
+      var _families = settings.teka.googleFonts.families.split("|");
       WebFontConfig = {
-        google: { families: [ settings.teka.googleFonts.families ] }
+        google: { families: _families }
       };
       (function() {
         var wf = document.createElement('script');
